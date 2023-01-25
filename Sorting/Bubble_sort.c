@@ -22,9 +22,10 @@ int main() {
 
 void bubbleSort(u32 *ptr,u32 size)
 {
-    u32 local_u32Temp;
+    u32 local_u32Temp,local_u8Flag;
     for(u8 i=0;i<size-1;i++)
     {
+        local_u8Flag=0;
         for(u8 j=0;j<size-1-i;j++)
         {
             if(ptr[j+1] < ptr[j])
@@ -32,7 +33,9 @@ void bubbleSort(u32 *ptr,u32 size)
                 local_u32Temp=ptr[j];
                 ptr[j]=ptr[j+1];
                 ptr[j+1]=local_u32Temp;
+                local_u8Flag=1;
             }
         }
+        if(local_u8Flag==0) break;
     }
 }

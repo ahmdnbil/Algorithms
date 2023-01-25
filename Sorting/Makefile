@@ -2,7 +2,7 @@
 
 #Bubble_sort
 #selection_sort
-algo_name= selection_sort
+algo_name= Bubble_sort
 
 build:
 	gcc '$(algo_name).c' -o lab.exe
